@@ -28,6 +28,7 @@ public class CLPeajeMapper implements FieldSetMapper<CEPeajeDTOEntrada>{
         oPeajeEntrada.setHoraPeaje(fieldSet.readString("HORA"));
         oPeajeEntrada.setTipoComprobante(fieldSet.readString("TIPOCOMPROBANTE"));
         oPeajeEntrada.setNumeroComprobante(fieldSet.readString("NUMEROCOMPROBANTE"));
+        oPeajeEntrada.setCategoria(fieldSet.readString("CATEGORIA"));
         oPeajeEntrada.setImporte(fieldSet.readDouble("IMPORTE"));
         MOLOG.info("[DAW] Mapper to CECompraDTOEntrada : {}", oPeajeEntrada.toString());
         return oPeajeEntrada;

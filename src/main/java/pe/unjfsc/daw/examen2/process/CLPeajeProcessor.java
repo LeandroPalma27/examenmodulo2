@@ -29,10 +29,15 @@ public class CLPeajeProcessor implements ItemProcessor<CEPeajeDTOEntrada, CEPeaj
         oPeajeSalida.setFechaPeaje(item.getFechaPeaje());
         oPeajeSalida.setHoraPeaje(item.getHoraPeaje());
         oPeajeSalida.setTipoComprobante(item.getTipoComprobante());
+        oPeajeSalida.setCategoria(item.getCategoria());
         oPeajeSalida.setImporte(item.getImporte());
         oPeajeSalida.setNumeroComprobante(item.getNumeroComprobante());
-        oPeajeSalida.setIgv(item.getImporte() * (18/100));
-        oPeajeSalida.setTotalMasIGV(item.getImporte() + oPeajeSalida.getIgv());
+        float xd = (18/100);
+        System.out.println(xd);
+        var igv = item.getImporte() * (18/100);
+        System.out.println(igv);
+        oPeajeSalida.setIgv(igv);
+        oPeajeSalida.setTotalMasIGV(item.getImporte() + igv);
         MOLOG.info("[DAW] Mapper to CECompraDTOEntrada : {}", oPeajeSalida.toString());
         return oPeajeSalida;
 	}
