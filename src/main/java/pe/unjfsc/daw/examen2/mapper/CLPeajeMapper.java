@@ -19,7 +19,7 @@ public class CLPeajeMapper implements FieldSetMapper<CEPeajeDTOEntrada>{
         MOLOG.info("[DAW] read record : {} ", fieldSet.toString());
        
         CEPeajeDTOEntrada oPeajeEntrada = new CEPeajeDTOEntrada();
-        oPeajeEntrada.setId(fieldSet.readInt("id"));
+        oPeajeEntrada.setId(fieldSet.readInt("ID"));
         oPeajeEntrada.setEmpresa(fieldSet.readString("EMPRESA"));
         oPeajeEntrada.setUc(fieldSet.readLong("UC"));
         oPeajeEntrada.setDireccion(fieldSet.readString("DIRECCION"));
